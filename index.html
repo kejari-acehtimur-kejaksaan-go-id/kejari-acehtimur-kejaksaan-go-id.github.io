@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KEJARI ACEH TIMUR</title>
+<link href="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/04/cropped-5aZdzMeHT0OdvJbaHClq_yOi5XBax2EhjWWNs-removebg-preview-32x32.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<meta name="google-site-verification" content="SrTZawFSaLAONuV52vjH13dAEw3zOeO0J7W9G7wwpi8" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;font-size:14px;color:#333;background:#f5f5f5}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+
+/* ── TOP BAR ── */
+#topbar{background:#1a1a2e;color:#aaa;font-size:12px;padding:7px 0;border-bottom:1px solid #2a2a3e}
+#topbar .w{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.tb-left{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.tb-left a{color:#aaa;display:flex;align-items:center;gap:5px;transition:color .2s}
+.tb-left a:hover{color:#f5c518}
+.tb-left i{color:#f5c518;font-size:11px}
+.tb-right{display:flex;gap:5px}
+.tb-right a{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:3px;background:rgba(255,255,255,.07);color:#bbb;font-size:12px;transition:background .2s,color .2s}
+.tb-right a:hover{background:#cc0000;color:#fff}
+
+/* ── HEADER ── */
+#header{background:#fff;border-bottom:4px solid #cc0000;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+#header .w{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
+.h-logos{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.h-logos img{width:78px;height:78px;object-fit:contain}
+.h-sep{width:1px;height:60px;background:#ddd;flex-shrink:0}
+.h-text{flex:1}
+.h-name{font-size:22px;font-weight:700;color:#cc0000;text-transform:uppercase;letter-spacing:.5px;line-height:1.2}
+.h-sub{font-size:12.5px;color:#555;margin-top:3px}
+.h-motto{font-size:11.5px;color:#cc0000;font-weight:600;font-style:italic;margin-top:5px;padding-left:10px;border-left:3px solid #cc0000}
+.h-contact{text-align:right;font-size:12px;line-height:1.9;color:#555;flex-shrink:0}
+.h-contact strong{color:#cc0000;font-size:11px;display:block}
+.h-contact a{color:#555}
+.h-contact a:hover{color:#cc0000}
+
+/* ── NAV ── */
+#nav{background:#cc0000;position:sticky;top:0;z-index:999;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+#nav .w{max-width:1200px;margin:0 auto;display:flex;align-items:stretch}
+#nav ul{list-style:none;display:flex;flex:1}
+#nav ul li{position:relative}
+#nav ul li a{display:flex;align-items:center;gap:4px;padding:13px 15px;color:#fff;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;white-space:nowrap;transition:background .2s}
+#nav ul li a:hover,#nav ul li.active>a,#nav ul li:hover>a{background:#9b0000}
+#nav ul li a .arr{font-size:9px;opacity:.7;margin-left:2px}
+/* dropdown */
+.sub{display:none;position:absolute;top:100%;left:0;min-width:240px;background:#fff;border-top:3px solid #cc0000;box-shadow:0 6px 20px rgba(0,0,0,.18);z-index:1000;list-style:none}
+#nav ul li:hover .sub{display:block}
+.sub li a{display:block;padding:9px 16px;font-size:13px;color:#333;border-bottom:1px solid #f0f0f0;text-transform:none;font-weight:400;letter-spacing:0;white-space:normal}
+.sub li:last-child a{border-bottom:none}
+.sub li a:hover{background:#cc0000;color:#fff}
+/* sub-sub */
+.sub2{display:none;position:absolute;top:0;left:100%;min-width:220px;background:#fff;border-top:3px solid #cc0000;box-shadow:0 6px 20px rgba(0,0,0,.18);list-style:none}
+.sub li:hover .sub2{display:block}
+.sub2 li a{display:block;padding:9px 16px;font-size:13px;color:#333;border-bottom:1px solid #f0f0f0}
+.sub2 li a:hover{background:#cc0000;color:#fff}
+/* search */
+.nav-s{display:flex;align-items:center;padding:7px 10px;gap:4px}
+.nav-s input{padding:5px 10px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.15);color:#fff;border-radius:3px 0 0 3px;font-size:12px;width:140px;outline:none}
+.nav-s input::placeholder{color:rgba(255,255,255,.5)}
+.nav-s button{background:#9b0000;border:none;color:#fff;padding:5px 10px;border-radius:0 3px 3px 0;cursor:pointer;font-size:12px;transition:background .2s}
+.nav-s button:hover{background:#1a1a2e}
+
+/* ── TICKER ── */
+#ticker{background:#f5c518;padding:8px 0;overflow:hidden}
+#ticker .w{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px}
+.t-lbl{background:#cc0000;color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;padding:3px 14px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+.t-wrap{overflow:hidden;flex:1}
+.t-text{display:inline-block;white-space:nowrap;font-size:13px;font-weight:600;color:#1a1a2e;animation:tick 30s linear infinite}
+@keyframes tick{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
+
+/* ── SLIDER ── */
+#slider{position:relative;background:#000;overflow:hidden;height:430px}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.slide.active{opacity:1;z-index:2}
+.slide-inner{width:100%;height:100%;display:flex;align-items:center;padding:0 90px;position:relative}
+/* Real slide backgrounds */
+.sl1 .slide-inner{background:linear-gradient(to right,rgba(5,10,30,.92) 42%,rgba(5,10,30,.45)),url('https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2024/07/mediasi-1.jpg') center/cover no-repeat}
+.sl2 .slide-inner{background:linear-gradient(to right,rgba(90,0,0,.92) 42%,rgba(90,0,0,.45)),url('https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/Gambar-WhatsApp-2022-12-12-pukul-08.24.49.jpg') center/cover no-repeat}
+.sl3 .slide-inner{background:linear-gradient(to right,rgba(5,10,30,.92) 42%,rgba(5,10,30,.45)),url('https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG-20221210-WA0019.jpg') center/cover no-repeat}
+.sl4 .slide-inner{background:linear-gradient(to right,rgba(90,0,0,.92) 42%,rgba(90,0,0,.45)),url('https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG-20221223-WA0014.jpg') center/cover no-repeat}
+.sc{position:relative;z-index:2;max-width:560px}
+.sc-tag{display:inline-block;background:#f5c518;color:#1a1a2e;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 13px;border-radius:2px;margin-bottom:14px}
+.sc h2{font-size:27px;font-weight:700;color:#fff;line-height:1.35;margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.sc p{font-size:14px;color:rgba(255,255,255,.88);line-height:1.8;margin-bottom:20px}
+.sc-btn{display:inline-block;background:#cc0000;color:#fff;padding:9px 24px;border-radius:3px;font-size:13px;font-weight:700;margin-right:8px;border:2px solid transparent;transition:all .2s}
+.sc-btn:hover{background:#9b0000}
+.sc-btn.ol{background:transparent;border-color:rgba(255,255,255,.55)}
+.sc-btn.ol:hover{background:rgba(255,255,255,.12)}
+.sl-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.38);color:#fff;border:2px solid rgba(255,255,255,.25);width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:10;transition:background .2s}
+.sl-btn:hover{background:#cc0000;border-color:#cc0000}
+#sl-prev{left:18px}#sl-next{right:18px}
+.sl-dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+.sl-dot{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,.35);border:2px solid rgba(255,255,255,.5);cursor:pointer;transition:all .25s}
+.sl-dot.active{background:#f5c518;border-color:#f5c518;transform:scale(1.2)}
+
+/* ── PAGE BODY ── */
+#body{max-width:1200px;margin:26px auto 44px;padding:0 20px;display:flex;gap:24px;align-items:flex-start}
+#main{flex:1;min-width:0}
+#sidebar{width:290px;flex-shrink:0}
+
+/* section head */
+.sh{display:flex;align-items:center;border-bottom:2px solid #e0e0e0;padding-bottom:9px;margin-bottom:18px}
+.sh-t{font-size:15px;font-weight:700;color:#cc0000;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.sh-t::before{content:'';display:block;width:5px;height:21px;background:#cc0000;border-radius:2px;flex-shrink:0}
+.sh-more{margin-left:auto;font-size:12px;color:#cc0000;font-weight:600}
+.sh-more:hover{text-decoration:underline}
+
+/* featured post */
+.feat{display:flex;background:#fff;border:1px solid #e0e0e0;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:24px}
+.feat-img{width:310px;flex-shrink:0;position:relative;min-height:215px;overflow:hidden;background:#111}
+.feat-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.feat:hover .feat-img img{transform:scale(1.04)}
+.feat-dt{position:absolute;bottom:10px;left:10px;background:#cc0000;color:#fff;font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:2px;z-index:2}
+.feat-body{padding:22px 24px;flex:1}
+.cat-badge{display:inline-block;background:#fce8e8;color:#cc0000;font-size:11px;font-weight:700;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:10px}
+.feat-body h2{font-size:17px;font-weight:700;line-height:1.45;margin-bottom:10px;color:#222}
+.feat-body h2 a:hover{color:#cc0000}
+.pmeta{display:flex;gap:14px;font-size:11.5px;color:#999;margin-bottom:12px;flex-wrap:wrap}
+.pmeta span{display:flex;align-items:center;gap:4px}
+.pmeta i{color:#cc0000}
+.feat-body p{font-size:13px;color:#555;line-height:1.8;margin-bottom:14px}
+.readmore{color:#cc0000;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border-bottom:1px solid transparent;transition:border-color .2s}
+.readmore:hover{border-color:#cc0000}
+
+/* post list */
+.plist{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:28px}
+.pc{background:#fff;border:1px solid #e0e0e0;border-radius:4px;overflow:hidden;transition:box-shadow .25s,transform .25s}
+.pc:hover{box-shadow:0 5px 18px rgba(0,0,0,.12);transform:translateY(-3px)}
+.pc-img{height:170px;overflow:hidden;background:#111;position:relative;display:flex;align-items:center;justify-content:center}
+.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.pc:hover .pc-img img{transform:scale(1.07)}
+.pc-cat{position:absolute;top:8px;right:8px;background:#f5c518;color:#1a1a2e;font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:2px}
+.pc-date{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,.65);color:#fff;font-size:10.5px;padding:2px 8px;border-radius:2px}
+.pc-body{padding:13px 14px}
+.pc-body h3{font-size:13px;font-weight:700;line-height:1.5;margin-bottom:7px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pc-body h3 a:hover{color:#cc0000}
+.pc-body p{font-size:12px;color:#666;line-height:1.65;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:8px}
+.pmeta2{font-size:11px;color:#aaa;display:flex;gap:10px;flex-wrap:wrap}
+.pmeta2 i{color:#cc0000}
+
+/* ── SIDEBAR ── */
+.sw{background:#fff;border:1px solid #e0e0e0;border-radius:4px;overflow:hidden;margin-bottom:22px}
+.sw-hd{background:#cc0000;color:#fff;padding:11px 15px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
+.sw-hd i{font-size:12px;opacity:.85}
+.sw-bd{padding:14px 15px}
+
+/* recent posts sidebar */
+.rp{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #f0f0f0;align-items:flex-start}
+.rp:last-child{border-bottom:none;padding-bottom:0}
+.rp-img{width:60px;height:54px;flex-shrink:0;border-radius:3px;overflow:hidden;background:#333;position:relative}
+.rp-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.rp-info h4{font-size:12px;font-weight:600;line-height:1.45;margin-bottom:4px}
+.rp-info h4 a:hover{color:#cc0000}
+.rp-date{font-size:10.5px;color:#aaa;display:flex;align-items:center;gap:4px}
+.rp-date i{color:#cc0000;font-size:10px}
+
+/* link list sidebar */
+.ll{list-style:none}
+.ll li{border-bottom:1px solid #f0f0f0}
+.ll li:last-child{border-bottom:none}
+.ll li a{display:flex;align-items:center;gap:8px;padding:8px 0;font-size:13px;color:#1a2744;transition:color .2s}
+.ll li a:hover{color:#cc0000}
+.ll li a::before{content:'›';color:#cc0000;font-size:18px;line-height:1;flex-shrink:0}
+
+/* contact sidebar */
+.ci{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:12.5px;color:#555;align-items:flex-start}
+.ci:last-child{border-bottom:none}
+.ci i{color:#cc0000;font-size:13px;flex-shrink:0;margin-top:2px;width:16px;text-align:center}
+.ci div{line-height:1.7}
+.ci strong{display:block;font-size:11.5px;font-weight:700;color:#333}
+
+/* about sidebar */
+.about-logo{margin-bottom:12px}
+.about-logo img{width:70px;height:70px;object-fit:contain}
+.about-txt{font-size:12.5px;line-height:1.8;color:#555;margin-bottom:10px}
+.about-social{display:flex;gap:6px}
+.asi{width:30px;height:30px;border-radius:3px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;color:#555;font-size:13px;transition:background .2s,color .2s}
+.asi:hover{background:#cc0000;color:#fff}
+
+/* ── FOOTER ── */
+#footer{background:#111827;color:#9ca3af;margin-top:40px}
+.fw{max-width:1200px;margin:0 auto;padding:38px 20px 32px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.fw-hd{color:#fff;font-size:13.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid #cc0000;display:flex;align-items:center;gap:8px}
+.fw-hd i{color:#f5c518}
+.f-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:13px}
+.f-logo-row img{width:55px;height:55px;object-fit:contain}
+.f-logo-name{font-size:13px;font-weight:700;color:#fff;line-height:1.4}
+.f-desc{font-size:12.5px;line-height:1.85;margin-bottom:14px}
+.f-soc{display:flex;gap:7px}
+.fsi{width:32px;height:32px;border-radius:3px;background:rgba(255,255,255,.07);color:#ccc;display:flex;align-items:center;justify-content:center;font-size:13px;transition:background .2s,color .2s}
+.fsi:hover{background:#cc0000;color:#fff}
+.fl{list-style:none}
+.fl li{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:12.5px}
+.fl li:last-child{border-bottom:none}
+.fl li a{color:#9ca3af;display:flex;align-items:center;gap:7px;transition:color .2s}
+.fl li a:hover{color:#f5c518}
+.fl li a::before{content:'›';color:#f5c518;font-size:16px;line-height:1;flex-shrink:0}
+.fci{display:flex;gap:10px;font-size:12.5px;color:#9ca3af;margin-bottom:10px;align-items:flex-start;line-height:1.7}
+.fci i{color:#f5c518;font-size:13px;flex-shrink:0;margin-top:2px}
+.f-map{margin-top:12px;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.1);height:120px;background:#0d2040;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;color:#9ca3af;font-size:12px;text-align:center;padding:10px}
+.f-map i{font-size:26px;color:#f5c518}
+#footbot{background:rgba(0,0,0,.4);border-top:1px solid rgba(255,255,255,.05);padding:13px 0}
+#footbot .w{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px;color:#6b7280}
+#footbot a{color:#f5c518}
+#footbot a:hover{text-decoration:underline}
+
+/* back to top */
+#btt{position:fixed;bottom:24px;right:24px;width:40px;height:40px;background:#cc0000;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,.3);z-index:9999;opacity:0;transition:opacity .3s,background .2s}
+#btt.show{opacity:1}
+#btt:hover{background:#9b0000}
+
+@media(max-width:950px){
+  #body{flex-direction:column}
+  #sidebar{width:100%}
+  .plist{grid-template-columns:1fr}
+  .feat{flex-direction:column}
+  .feat-img{width:100%;height:210px}
+  .fw{grid-template-columns:1fr 1fr}
+  #slider{height:320px}
+  .slide-inner{padding:0 55px}
+  .sc h2{font-size:20px}
+}
+@media(max-width:600px){
+  .h-contact{display:none}
+  .h-name{font-size:16px}
+  #slider{height:260px}
+  .sc h2{font-size:17px}
+  .sc p{display:none}
+  #nav ul li a{padding:11px 9px;font-size:10.5px}
+  .fw{grid-template-columns:1fr}
+  #footbot .w{justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="w">
+    <div class="tb-left">
+      <a href="mailto:kn.idi@kejaksaan.go.id"><i class="fa-solid fa-envelope"></i> kn.idi@kejaksaan.go.id</a>
+      <a href="tel:064621090"><i class="fa-solid fa-phone"></i> (0646) 21090</a>
+      <a href="#"><i class="fa-solid fa-calendar-days"></i> Sabtu, 21 Maret 2026</a>
+    </div>
+    <div class="tb-right">
+      <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/Kejariacehtimur" title="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/c/KejaksaanNegeriAcehTimur" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/kejariacehtimur/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="w">
+    <div class="h-logos">
+      <!-- Logo resmi dari URL yang diberikan -->
+      <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2025/09/Insignia_of_the_Attorney_Office_of_the_Republic_of_Indonesia.png"
+        alt="Logo Kejaksaan Negeri Aceh Timur"
+        onerror="this.onerror=null;this.style.cssText='width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,#cc0000,#1a1a2e);display:block;'">
+    </div>
+    <div class="h-sep"></div>
+    <div class="h-text">
+      <div class="h-name">Kejaksaan Negeri Aceh Timur</div>
+      <div class="h-sub">Satuan Kerja Kejaksaan Republik Indonesia &ndash; Wilayah Hukum Kabupaten Aceh Timur, Provinsi Aceh</div>
+      <div class="h-motto">Pasti Bisa! &mdash; Cepat, Cermat, Cerdas dan Terpercaya dalam Penegakan dan Pelayanan Hukum</div>
+    </div>
+    <div class="h-contact">
+      <strong>Alamat Kantor</strong>
+      Jl. Peutua Husen No.06, Kec. Idi Rayeuk<br>
+      Kab. Aceh Timur, Provinsi Aceh
+      <strong style="margin-top:4px">Telepon &amp; WA Pengaduan</strong>
+      <a href="tel:064621090">(0646) 21090</a> / Fax: (0646) 24454<br>
+      WA: <a href="https://wa.me/6282161696769">0821-6169-6769</a>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="w">
+    <ul>
+      <li class="active"><a href="https://kejari-acehtimur.kejaksaan.go.id/"><i class="fa-solid fa-house" style="font-size:11px"></i> Beranda</a></li>
+      <li>
+        <a href="https://kejari-acehtimur.kejaksaan.go.id/profil/">Profil <span class="arr"><i class="fa-solid fa-chevron-down"></i></span></a>
+        <ul class="sub">
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/pengertian-kejaksaan/">Pengertian Kejaksaan</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/struktur-organisasi/">Struktur Organisasi</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/tentang-kami/">Tentang Kami</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/visi-dan-misi/">Visi dan Misi</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/tugas-pokok-dan-fungsi-wewenang/">Tugas Pokok dan Fungsi Wewenang</a></li>
+          <li style="position:relative">
+            <a href="https://kejari-acehtimur.kejaksaan.go.id/pejabat-struktural/">Pejabat Struktural <span class="arr" style="float:right"><i class="fa-solid fa-chevron-right"></i></span></a>
+            <ul class="sub2">
+              <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kepala-kejaksaan-negeri-aceh-timur/">Kepala Kejaksaan Negeri Aceh Timur</a></li>
+              <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kepala-bidang-intelijen/">Kepala Seksi Intelijen</a></li>
+              <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kepala-bidang-perdata-dan-tun-2/">Kepala Seksi Perdata dan TUN</a></li>
+              <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kepala-bidang-pidana-khusus-2/">Kepala Seksi Pidana Khusus</a></li>
+              <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kepala-bidang-pidana-umum-2/">Kepala Seksi Pidana Umum</a></li>
+              <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kepala-seksi-barang-bukti-dan-barang-rampasan/">Kepala Seksi Barang Bukti Dan Barang Rampasan</a></li>
+              <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kepala-bidang-pembinaan/">Kepala Sub Bagian Pembinaan</a></li>
+            </ul>
+          </li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/perintah-harian-jaksa-agung/">Perintah Harian Jaksa Agung</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/doktrin-kejaksaan/">Doktrin Kejaksaan</a></li>
+        </ul>
+      </li>
+      <li><a href="https://kejari-acehtimur.kejaksaan.go.id/berita/">Berita</a></li>
+      <li>
+        <a href="#">Pelayanan Informasi Publik <span class="arr"><i class="fa-solid fa-chevron-down"></i></span></a>
+        <ul class="sub">
+          <li><a href="https://ppid.kejaksaan.go.id/satker/kn-aceh-timur" target="_blank">PPID</a></li>
+          <li><a href="https://drive.google.com/open?id=1VE22leVzPxNQ6luXB9b3pTPArFON01Wi&usp=drive_fs" target="_blank">RENSTRA</a></li>
+          <li><a href="https://drive.google.com/open?id=18Gd2kPchRuZ18cV_OjQF88kWH0PYdFfb&usp=drive_fs" target="_blank">RENJA KN ACEH TIMUR</a></li>
+          <li><a href="https://drive.google.com/open?id=1i8wQoeJx1oZNQ7cA3h_FNgPPHLkRPXZ-&usp=drive_fs" target="_blank">PERJANJIAN KINERJA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://kejari-acehtimur.kejaksaan.go.id/pelayanan-publik/">Pelayanan Publik <span class="arr"><i class="fa-solid fa-chevron-down"></i></span></a>
+        <ul class="sub">
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/motto-pelayanan-2/">Motto Pelayanan</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/visi-dan-misi-pelayanan/">Visi dan Misi Pelayanan</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kebijakan-pelayanan/">Kebijakan Pelayanan</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/maklumat-pelayanan-3/">Maklumat Pelayanan</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kebijakan-pengembangan-sdm/">Kebijakan Pengembangan SDM</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kebijakan-kompensasi-bagi-penerima-layanan/">Kebijakan Kompensasi bagi Penerima Layanan</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/standar-pelayanan-publik/">Standar Pelayanan Publik</a></li>
+          <li><a href="https://kejari-acehtimur.kejaksaan.go.id/aplikasi-pelayanan/">Aplikasi Pelayanan</a></li>
+          <li><a href="https://jdih.kejaksaan.go.id/" target="_blank">Produk Hukum</a></li>
+        </ul>
+      </li>
+      <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kontak-kami/">Kontak Kami</a></li>
+    </ul>
+    <div class="nav-s">
+      <input type="text" placeholder="Cari...">
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div id="ticker">
+  <div class="w">
+    <div class="t-lbl"><i class="fa-solid fa-bullhorn"></i> Pengumuman</div>
+    <div class="t-wrap">
+      <div class="t-text">
+        Selamat Datang di Website Resmi Kejaksaan Negeri Aceh Timur &nbsp;|&nbsp; Hotline Pengaduan Masyarakat WA: 0821-6169-6769 &nbsp;|&nbsp;
+        Jam Pelayanan: Senin – Jumat 08.00 – 16.00 WIB &nbsp;|&nbsp; Waspada Penipuan yang Mengatasnamakan Kejaksaan Negeri Aceh Timur &nbsp;|&nbsp;
+        Tingkat Kepercayaan Publik Terhadap Kejaksaan Menjadi 80,6% (Indikator Politik Indonesia, April 2023)
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDER -->
+<div id="slider">
+  <!-- Slide 1: Mediasi PT Atakana -->
+  <div class="slide sl1 active">
+    <div class="slide-inner">
+      <div class="sc">
+        <div class="sc-tag"><i class="fa-solid fa-scale-balanced"></i> Berita Terbaru</div>
+        <h2>Mediasi Permasalahan di Perkebunan Sawit PT. Atakana Company</h2>
+        <p>Berlangsung di Aula Sekretariat Daerah Kabupaten Aceh Timur, dihadiri unsur Forkopimda dan instansi terkait, Senin 29 Juli 2024.</p>
+        <a href="https://kejari-acehtimur.kejaksaan.go.id/" class="sc-btn">Baca Selengkapnya</a>
+        <a href="https://kejari-acehtimur.kejaksaan.go.id/berita/" class="sc-btn ol">Lihat Semua Berita</a>
+      </div>
+    </div>
+  </div>
+  <!-- Slide 2: Apel Pagi -->
+  <div class="slide sl2">
+    <div class="slide-inner">
+      <div class="sc">
+        <div class="sc-tag"><i class="fa-solid fa-flag"></i> Kegiatan Instansi</div>
+        <h2>Apel Pagi Rutin Kejaksaan Negeri Aceh Timur</h2>
+        <p>Kejaksaan Negeri Aceh Timur secara rutin melaksanakan apel pagi setiap hari Senin di lapangan kantor sebagai wujud disiplin dan profesionalisme aparatur.</p>
+        <a href="https://kejari-acehtimur.kejaksaan.go.id/berita/" class="sc-btn">Lihat Berita</a>
+      </div>
+    </div>
+  </div>
+  <!-- Slide 3: PORA -->
+  <div class="slide sl3">
+    <div class="slide-inner">
+      <div class="sc">
+        <div class="sc-tag"><i class="fa-solid fa-trophy"></i> Kegiatan Pimpinan</div>
+        <h2>Kajari Menghadiri Pembukaan PORA XIV di Kabupaten Pidie</h2>
+        <p>Kepala Kejaksaan Negeri Aceh Timur Bapak Semeru, S.H., M.H. menghadiri pembukaan Pekan Olahraga Aceh ke-XIV di Lapangan Blangpaseh, Kota Sigli.</p>
+        <a href="https://kejari-acehtimur.kejaksaan.go.id/berita/" class="sc-btn">Baca Selengkapnya</a>
+        <a href="https://kejari-acehtimur.kejaksaan.go.id/berita/" class="sc-btn ol">Lihat Semua</a>
+      </div>
+    </div>
+  </div>
+  <!-- Slide 4: Stunting -->
+  <div class="slide sl4">
+    <div class="slide-inner">
+      <div class="sc">
+        <div class="sc-tag"><i class="fa-solid fa-heart-pulse"></i> Program Unggulan</div>
+        <h2>Program Adhyaksa Peduli Stunting Aceh Tahun 2022</h2>
+        <p>Kegiatan Program Adhyaksa Peduli Stunting Aceh berlangsung di Puskesmas Peureulak Kota, Kabupaten Aceh Timur, dihadiri sekitar 50 peserta.</p>
+        <a href="https://kejari-acehtimur.kejaksaan.go.id/berita/" class="sc-btn">Baca Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+  <button class="sl-btn" id="sl-prev" onclick="chg(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="sl-btn" id="sl-next" onclick="chg(1)"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="sl-dots">
+    <div class="sl-dot active" onclick="go(0)"></div>
+    <div class="sl-dot" onclick="go(1)"></div>
+    <div class="sl-dot" onclick="go(2)"></div>
+    <div class="sl-dot" onclick="go(3)"></div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div id="body">
+
+  <!-- MAIN -->
+  <div id="main">
+
+    <!-- Berita Utama -->
+    <div class="sh"><div class="sh-t">Berita Utama</div><a href="https://kejari-acehtimur.kejaksaan.go.id/berita/" class="sh-more">Lihat Semua &raquo;</a></div>
+    <div class="feat">
+      <div class="feat-img">
+        <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2024/07/mediasi-1.jpg"
+          alt="Mediasi PT Atakana"
+          onerror="this.onerror=null;this.src='';this.parentNode.style.background='linear-gradient(135deg,#0d1b3e,#8B0000)'">
+        <div class="feat-dt"><i class="fa-solid fa-calendar-days"></i> 29 Juli 2024</div>
+      </div>
+      <div class="feat-body">
+        <span class="cat-badge">BERITA</span>
+        <h2><a href="https://kejari-acehtimur.kejaksaan.go.id/">Mediasi Permasalahan di Perkebunan Sawit PT. Atakana Company Berlangsung di Aula Sekretariat Daerah Kabupaten Aceh Timur</a></h2>
+        <div class="pmeta">
+          <span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span>
+          <span><i class="fa-solid fa-calendar-days"></i> 29 Juli 2024</span>
+          <span><i class="fa-solid fa-folder"></i> Berita</span>
+          <span><i class="fa-regular fa-comment"></i> 0 Komentar</span>
+        </div>
+        <p>Aceh Timur, 29 Juli 2024 – Pada hari Senin, 29 Juli 2024, pukul 10.45 WIB, telah dilaksanakan mediasi terkait permasalahan yang terjadi di Perkebunan Sawit PT. Atakana Company. Kegiatan ini berlangsung di Aula Sekretariat Daerah Kabupaten Aceh Timur, Desa Seunobok Teungoh PP, Kecamatan Idi Rayeuk, dengan dihadiri oleh sekitar 20 peserta dari berbagai instansi terkait termasuk unsur Forkopimda.</p>
+        <a href="https://kejari-acehtimur.kejaksaan.go.id/" class="readmore">Read More <i class="fa-solid fa-arrow-right" style="font-size:11px"></i></a>
+      </div>
+    </div>
+
+    <!-- Berita Terbaru -->
+    <div class="sh"><div class="sh-t">Berita Terbaru</div><a href="https://kejari-acehtimur.kejaksaan.go.id/berita/" class="sh-more">Lihat Semua &raquo;</a></div>
+    <div class="plist">
+
+      <!-- 1: Klarifikasi Pungli -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2023/07/Artboard-1.png"
+            alt="Klarifikasi Pungli"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Berita</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Juli 5, 2023</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2023/07/05/klarifikasi-terkait-berita-dugaan-pungli-kadisdik-aceh-timur-dan-oknum-jaksa-terhadap-kepala-sekolah-di-kabupaten-aceh-timur/">KLARIFIKASI TERKAIT BERITA DUGAAN "PUNGLI" KADISDIK ACEH TIMUR DAN OKNUM JAKSA TERHADAP KEPALA SEKOLAH DI KABUPATEN ACEH TIMUR</a></h3>
+          <p>Pada Rabu, 5 Juli 2023, Kejaksaan Negeri Aceh Timur melalui Tim Intelijen telah melakukan klarifikasi terhadap 19 orang yang terkait dengan berita dugaan pungli.</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Juli 5, 2023</span></div>
+        </div>
+      </div>
+
+      <!-- 2: LVRI -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2023/01/IMG-20230105-WA0038.jpg"
+            alt="HUT LVRI ke-66"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Kegiatan</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Januari 5, 2023</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2023/01/05/kejaksaan-aceh-timur-hadir-dalam-upacara-hut-lvri-ke-66-di-kabupaten-aceh-timur-semangat-persatuan-bangsa-tetap-terjaga/">KEJAKSAAN ACEH TIMUR HADIR DALAM UPACARA HUT LVRI KE-66 DI KABUPATEN ACEH TIMUR, SEMANGAT PERSATUAN BANGSA TETAP TERJAGA</a></h3>
+          <p>IDI RAYEUK – Kejaksaan Aceh Timur turut hadir dalam Upacara HUT LVRI ke-66 di halaman Pendopo Bupati Aceh Timur, Kamis 05 Januari 2023, diikuti sekitar 150 orang.</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Januari 5, 2023</span></div>
+        </div>
+      </div>
+
+      <!-- 3: Stunting -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG-20221223-WA0014.jpg"
+            alt="Program Stunting"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Program</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Desember 23, 2022</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2022/12/23/program-adhyaksa-peduli-stunting-aceh-tahun-2022-akhir-tahun-berlangsung-di-puskesmas-peureulak-kota/">PROGRAM ADHYAKSA PEDULI STUNTING ACEH TAHUN 2022 AKHIR TAHUN BERLANGSUNG DI PUSKESMAS PEUREULAK KOTA</a></h3>
+          <p>Aceh Timur – Pada hari Jumat, 23 Desember 2022, sekitar pukul 10.00 WIB, dilaksanakan kegiatan Program Adhyaksa Peduli Stunting Aceh Tahun 2022 di Puskesmas Peureulak Kota.</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Desember 23, 2022</span></div>
+        </div>
+      </div>
+
+      <!-- 4: Rapat Inflasi -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/photo_2022-12-20_15-10-27.jpg"
+            alt="Rapat Inflasi"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Kegiatan</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Desember 20, 2022</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2022/12/20/kepala-seksi-perdata-dan-tata-usaha-negara-di-kejaksaan-negeri-aceh-timur-hadiri-rapat-inflasi-yang-diselenggarakan-oleh-pemda-aceh-timur/">KEPALA SEKSI PERDATA DAN TATA USAHA NEGARA DI KEJAKSAAN NEGERI ACEH TIMUR HADIRI RAPAT INFLASI YANG DISELENGGARAKAN OLEH PEMDA ACEH TIMUR</a></h3>
+          <p>Kepala Kejaksaan Negeri Aceh Timur diwakili oleh Kepala Seksi Perdata dan TUN Rahmah Hayati Sinaga, S.H. menghadiri Rapat Inflasi yang diselenggarakan Pemda Aceh Timur.</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Desember 20, 2022</span></div>
+        </div>
+      </div>
+
+      <!-- 5: Apel Pagi 19 Des -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG_2778-scaled.jpg"
+            alt="Apel Pagi 19 Des"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Kegiatan</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Desember 19, 2022</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2022/12/19/apel-pagi-senin-19-desember-2022/">APEL PAGI (SENIN, 19 DESEMBER 2022)</a></h3>
+          <p>Senin pagi (19/12), Kepala Seksi Tindak Pidana Umum Septeddy Endra Wijaya, S.H., M.H, memimpin pelaksanaan Apel di halaman kantor Kejaksaan Negeri Aceh Timur.</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Desember 19, 2022</span></div>
+        </div>
+      </div>
+
+      <!-- 6: Vonis Zina -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG-20221215-WA0034.jpg"
+            alt="Eksekusi Hukum Cambuk"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Hukum</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Desember 15, 2022</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2022/12/15/tiga-orang-laki-laki-dan-satu-orang-perempuan-di-aceh-timur-divonis-zina-dan-dicambuk-400-kali/">TIGA ORANG LAKI-LAKI DAN SATU ORANG PEREMPUAN DI ACEH TIMUR DIVONIS ZINA DAN DICAMBUK 400 KALI</a></h3>
+          <p>IDI – Kejaksaan Negeri Aceh Timur bekerja sama dengan Dinas Syariat Islam, Satpol PP dan WH Aceh Timur melakukan eksekusi hukuman cambuk terhadap empat terpidana.</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Desember 15, 2022</span></div>
+        </div>
+      </div>
+
+      <!-- 7: Pelantikan -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG-20221214-WA0039.jpg"
+            alt="Upacara Pelantikan"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Kegiatan</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Desember 14, 2022</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2022/12/14/upacara-pelantikan-dan-pengambilan-sumpah-jabatan/">UPACARA PELANTIKAN DAN PENGAMBILAN SUMPAH JABATAN</a></h3>
+          <p>Kepala Kejaksaan Negeri Aceh Timur Semeru, S.H., M.H. memimpin upacara pelantikan Deby Rinaldi, S.H., M.H. sebagai Kepala Seksi Barang Bukti dan Rampasan.</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Desember 14, 2022</span></div>
+        </div>
+      </div>
+
+      <!-- 8: HAM -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/2022_12_12_13_55_IMG_0045-scaled.jpg"
+            alt="Hari HAM"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Kegiatan</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Desember 13, 2022</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2022/12/13/peringatan-hari-hak-asasi-manusia-di-aceh-timur-massa-aksi-minta-penegakan-hukum-yang-berkeadilan/">PERINGATAN HARI HAK ASASI MANUSIA DI ACEH TIMUR: MASSA AKSI MINTA PENEGAKAN HUKUM YANG BERKEADILAN</a></h3>
+          <p>Pada 10 Desember setiap tahunnya, warga dunia merayakan Hari Hak Asasi Manusia. Massa aksi di Aceh Timur meminta penegakan hukum yang berkeadilan.</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Desember 13, 2022</span></div>
+        </div>
+      </div>
+
+      <!-- 9: Apel 12 Des -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/Gambar-WhatsApp-2022-12-12-pukul-08.24.49.jpg"
+            alt="Apel Pagi 12 Des"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Kegiatan</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Desember 12, 2022</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2022/12/12/apel-pagi-senin-12-desember-2022/">APEL PAGI (SENIN, 12 DESEMBER 2022)</a></h3>
+          <p>Kejaksaan Negeri Aceh Timur melaksanakan kegiatan Apel pagi pada hari Senin (12/12/2022) di Lapangan Kantor, dipimpin Kasubbag Pembinaan Rizky Fauzi, S.H.</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Desember 12, 2022</span></div>
+        </div>
+      </div>
+
+      <!-- 10: PORA -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG-20221210-WA0019.jpg"
+            alt="PORA XIV Pidie"
+            onerror="this.style.display='none'">
+          <div class="pc-cat">Kegiatan</div>
+          <div class="pc-date"><i class="fa-solid fa-calendar-days"></i> Desember 10, 2022</div>
+        </div>
+        <div class="pc-body">
+          <h3><a href="https://kejari-acehtimur.kejaksaan.go.id/2022/12/10/kajari-menghadiri-pembukaan-pora-ke-xiv-di-kabupaten-pidie/">KAJARI MENGHADIRI PEMBUKAAN PORA KE XIV DI KABUPATEN PIDIE</a></h3>
+          <p>Kepala Kejaksaan Negeri Aceh Timur Bapak Semeru, S.H., M.H menghadiri pembukaan PORA ke-XIV di Lapangan Blangpaseh, Kota Sigli, Pidie, Sabtu (10/11/2022).</p>
+          <div class="pmeta2"><span><i class="fa-solid fa-user"></i> ADMIN KEJARI ACEH TIMUR</span><span><i class="fa-solid fa-calendar-days"></i> Desember 10, 2022</span></div>
+        </div>
+      </div>
+
+    </div><!-- /plist -->
+
+    <!-- Pagination -->
+    <div style="display:flex;gap:6px;margin-top:4px;margin-bottom:30px">
+      <span style="background:#cc0000;color:#fff;padding:6px 12px;border-radius:3px;font-size:13px;font-weight:700">1</span>
+      <a href="https://kejari-acehtimur.kejaksaan.go.id/tag/kejari-aceh-timur/page/2/" style="background:#fff;border:1px solid #ddd;color:#333;padding:6px 12px;border-radius:3px;font-size:13px;transition:background .2s" onmouseover="this.style.background='#cc0000';this.style.color='#fff'" onmouseout="this.style.background='#fff';this.style.color='#333'">2</a>
+      <a href="https://kejari-acehtimur.kejaksaan.go.id/tag/kejari-aceh-timur/page/3/" style="background:#fff;border:1px solid #ddd;color:#333;padding:6px 12px;border-radius:3px;font-size:13px;transition:background .2s" onmouseover="this.style.background='#cc0000';this.style.color='#fff'" onmouseout="this.style.background='#fff';this.style.color='#333'">3</a>
+      <a href="https://kejari-acehtimur.kejaksaan.go.id/tag/kejari-aceh-timur/page/4/" style="background:#fff;border:1px solid #ddd;color:#333;padding:6px 12px;border-radius:3px;font-size:13px;transition:background .2s" onmouseover="this.style.background='#cc0000';this.style.color='#fff'" onmouseout="this.style.background='#fff';this.style.color='#333'">4</a>
+    </div>
+
+  </div><!-- /main -->
+
+  <!-- SIDEBAR -->
+  <div id="sidebar">
+
+    <!-- Search -->
+    <div class="sw">
+      <div class="sw-hd"><i class="fa-solid fa-magnifying-glass"></i> Cari</div>
+      <div class="sw-bd">
+        <div style="display:flex;gap:0">
+          <input type="text" placeholder="Cari..." style="flex:1;padding:8px 10px;border:1px solid #ddd;border-right:none;border-radius:3px 0 0 3px;font-size:13px;outline:none">
+          <button style="background:#cc0000;color:#fff;border:none;padding:8px 13px;border-radius:0 3px 3px 0;cursor:pointer;font-size:13px"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Posts -->
+    <div class="sw">
+      <div class="sw-hd"><i class="fa-solid fa-clock-rotate-left"></i> Recent Posts</div>
+      <div class="sw-bd">
+
+        <div class="rp">
+          <div class="rp-img">
+            <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2026/02/korupsi-bumd.jpg" alt="Korupsi BUMD" onerror="this.onerror=null;this.src='https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2025/09/Insignia_of_the_Attorney_Office_of_the_Republic_of_Indonesia.png';this.style.objectFit='contain';this.style.background='#f5f5f5'">
+          </div>
+          <div class="rp-info">
+            <h4><a href="https://kejari-acehtimur.kejaksaan.go.id/2026/02/18/kejaksaan-negeri-aceh-timur-tetapkan-tersangka-dugaan-korupsi-dalam-pengelolaan-bumd-pt-beurata-maju-aceh-timur-tahun-2022-2023/">KEJAKSAAN NEGERI ACEH TIMUR TETAPKAN TERSANGKA DUGAAN KORUPSI DALAM PENGELOLAAN BUMD PT. BEURATA MAJU ACEH TIMUR TAHUN 2022–2023</a></h4>
+            <div class="rp-date"><i class="fa-solid fa-calendar-days"></i> Februari 18, 2026</div>
+          </div>
+        </div>
+
+        <div class="rp">
+          <div class="rp-img">
+            <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2026/02/cambuk.jpg" alt="Cambuk" onerror="this.onerror=null;this.src='https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG-20221215-WA0034.jpg'">
+          </div>
+          <div class="rp-info">
+            <h4><a href="https://kejari-acehtimur.kejaksaan.go.id/2026/02/11/eksekusi-pelanggaran-syariat-islam-uqubat-cambuk-di-kabupaten-aceh-timur/">EKSEKUSI PELANGGARAN SYARIAT ISLAM (UQUBAT CAMBUK) DI KABUPATEN ACEH TIMUR</a></h4>
+            <div class="rp-date"><i class="fa-solid fa-calendar-days"></i> Februari 11, 2026</div>
+          </div>
+        </div>
+
+        <div class="rp">
+          <div class="rp-img">
+            <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2026/02/apel-zi.jpg" alt="Apel ZI" onerror="this.onerror=null;this.src='https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/Gambar-WhatsApp-2022-12-12-pukul-08.24.49.jpg'">
+          </div>
+          <div class="rp-info">
+            <h4><a href="https://kejari-acehtimur.kejaksaan.go.id/2026/02/09/kejaksaan-negeri-aceh-timur-gelar-apel-zona-integritas-menuju-wbk-tegaskan-komitmen-bersama-wujudkan-pelayanan-berintegritas/">KEJAKSAAN NEGERI ACEH TIMUR GELAR APEL ZONA INTEGRITAS MENUJU WBK</a></h4>
+            <div class="rp-date"><i class="fa-solid fa-calendar-days"></i> Februari 9, 2026</div>
+          </div>
+        </div>
+
+        <div class="rp">
+          <div class="rp-img">
+            <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2026/02/eksekusi-bibit-ikan.jpg" alt="Eksekusi Bibit Ikan" onerror="this.onerror=null;this.src='https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG-20221215-WA0034.jpg'">
+          </div>
+          <div class="rp-info">
+            <h4><a href="https://kejari-acehtimur.kejaksaan.go.id/2026/02/04/pelaksanaan-eksekusi-terhadap-terpidana-dalam-perkara-tindak-pidana-korupsi-pengadaan-bibit-ikan-kakap-pada-bra-prov-aceh-tahun-anggaran-2023-oleh-tim-eksekutor-pidsus-kejari-aceh-timur/">PELAKSANAAN EKSEKUSI TERHADAP TERPIDANA DALAM PERKARA TINDAK PIDANA KORUPSI PENGADAAN BIBIT IKAN KAKAP PADA BRA PROV. ACEH</a></h4>
+            <div class="rp-date"><i class="fa-solid fa-calendar-days"></i> Februari 4, 2026</div>
+          </div>
+        </div>
+
+        <div class="rp">
+          <div class="rp-img">
+            <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2026/02/eks-ketua-bra.jpg" alt="Eks Ketua BRA" onerror="this.onerror=null;this.src='https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2022/12/IMG-20221215-WA0034.jpg'">
+          </div>
+          <div class="rp-info">
+            <h4><a href="https://kejari-acehtimur.kejaksaan.go.id/2026/02/03/eks-ketua-bra-dan-empat-terpidana-korupsi-bibit-ikan-dieksekusi-ke-lapas-kajhu/">EKS KETUA BRA DAN EMPAT TERPIDANA KORUPSI BIBIT IKAN DIEKSEKUSI KE LAPAS KAJHU</a></h4>
+            <div class="rp-date"><i class="fa-solid fa-calendar-days"></i> Februari 3, 2026</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Recent Comments -->
+    <div class="sw">
+      <div class="sw-hd"><i class="fa-regular fa-comment"></i> Recent Comments</div>
+      <div class="sw-bd">
+        <p style="font-size:13px;color:#999;padding:5px 0">Tidak ada komentar untuk ditampilkan.</p>
+      </div>
+    </div>
+
+    <!-- Tentang Kami -->
+    <div class="sw">
+      <div class="sw-hd"><i class="fa-solid fa-building-columns"></i> Tentang Kami</div>
+      <div class="sw-bd">
+        <div class="about-logo">
+          <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2023/01/LOGO-KEJARI-ACEH-TIMUR-WHITE-1-e1675140802608.png"
+            alt="Logo Kejari Aceh Timur"
+            onerror="this.onerror=null;this.src='https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2025/09/Insignia_of_the_Attorney_Office_of_the_Republic_of_Indonesia.png';this.style.background='#1a1a2e';this.style.borderRadius='4px';this.style.padding='4px'">
+        </div>
+        <div class="about-txt">
+          <strong>Jalan Peutua Husen No.06, Kecamatan Idi Rayeuk, Kabupaten Aceh Timur</strong><br><br>
+          <strong>WA Pengaduan : 0821-6169-6769</strong><br>
+          <strong>(0646) 21090 / Fax : (0646) 24454</strong><br>
+          <strong>kn.idi@kejaksaan.go.id</strong><br>
+          <strong>kn.idi@gmail.com</strong>
+        </div>
+        <div class="about-social">
+          <a href="https://www.facebook.com/" class="asi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/Kejariacehtimur" class="asi" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.youtube.com/c/KejaksaanNegeriAcehTimur" class="asi" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/kejariacehtimur/" class="asi" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sidebar -->
+</div><!-- /body -->
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="fw">
+
+    <div>
+      <div class="fw-hd"><i class="fa-solid fa-building-columns"></i> Kejari Aceh Timur</div>
+      <div class="f-logo-row">
+        <img src="https://kejari-acehtimur.kejaksaan.go.id/wp-content/uploads/2025/09/Insignia_of_the_Attorney_Office_of_the_Republic_of_Indonesia.png"
+          alt="Logo Kejaksaan" onerror="this.style.display='none'">
+        <div class="f-logo-name">KEJAKSAAN NEGERI<br>ACEH TIMUR</div>
+      </div>
+      <p class="f-desc">Kejaksaan Negeri Aceh Timur adalah satuan kerja Kejaksaan Republik Indonesia yang bertugas melaksanakan kekuasaan negara di bidang penuntutan di wilayah hukum Kabupaten Aceh Timur yang mencakup 24 Kecamatan, 54 Mukim, dan 513 Desa. Motto: <em>"Pasti Bisa!"</em></p>
+      <div class="f-soc">
+        <a href="https://www.facebook.com/" class="fsi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/Kejariacehtimur" class="fsi" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/c/KejaksaanNegeriAcehTimur" class="fsi" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/kejariacehtimur/" class="fsi" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <div class="fw-hd"><i class="fa-solid fa-sitemap"></i> Navigasi</div>
+      <ul class="fl">
+        <li><a href="https://kejari-acehtimur.kejaksaan.go.id/">Beranda</a></li>
+        <li><a href="https://kejari-acehtimur.kejaksaan.go.id/profil/">Profil</a></li>
+        <li><a href="https://kejari-acehtimur.kejaksaan.go.id/tentang-kami/">Tentang Kami</a></li>
+        <li><a href="https://kejari-acehtimur.kejaksaan.go.id/visi-dan-misi/">Visi dan Misi</a></li>
+        <li><a href="https://kejari-acehtimur.kejaksaan.go.id/struktur-organisasi/">Struktur Organisasi</a></li>
+        <li><a href="https://kejari-acehtimur.kejaksaan.go.id/berita/">Berita</a></li>
+        <li><a href="https://kejari-acehtimur.kejaksaan.go.id/pelayanan-publik/">Pelayanan Publik</a></li>
+        <li><a href="https://ppid.kejaksaan.go.id/satker/kn-aceh-timur">PPID</a></li>
+        <li><a href="https://kejari-acehtimur.kejaksaan.go.id/kontak-kami/">Kontak Kami</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="fw-hd"><i class="fa-solid fa-globe"></i> Link Terkait</div>
+      <ul class="fl">
+        <li><a href="https://www.kejaksaan.go.id" target="_blank">Kejaksaan Agung RI</a></li>
+        <li><a href="https://kejati-aceh.kejaksaan.go.id" target="_blank">Kejaksaan Tinggi Aceh</a></li>
+        <li><a href="https://www.mahkamahagung.go.id" target="_blank">Mahkamah Agung RI</a></li>
+        <li><a href="https://komisi.kejaksaan.go.id" target="_blank">Komisi Kejaksaan RI</a></li>
+        <li><a href="https://acehtimur.go.id" target="_blank">Pemerintah Kab. Aceh Timur</a></li>
+        <li><a href="https://www.kpk.go.id" target="_blank">KPK RI</a></li>
+        <li><a href="https://www.bnn.go.id" target="_blank">BNN RI</a></li>
+        <li><a href="https://jdih.kejaksaan.go.id" target="_blank">Produk Hukum JDIH</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="fw-hd"><i class="fa-solid fa-map-location-dot"></i> Kontak &amp; Lokasi</div>
+      <div class="fci"><i class="fa-solid fa-location-dot"></i><div>Jl. Peutua Husen No.06, Kec. Idi Rayeuk, Kab. Aceh Timur, Provinsi Aceh</div></div>
+      <div class="fci"><i class="fa-solid fa-phone"></i><div>Telp. (0646) 21090<br>Fax. (0646) 24454</div></div>
+      <div class="fci"><i class="fab fa-whatsapp"></i><div>WA Pengaduan: 0821-6169-6769</div></div>
+      <div class="fci"><i class="fa-solid fa-envelope"></i><div>kn.idi@kejaksaan.go.id<br>kn.idi@gmail.com<br>kn.idi@ymail.com</div></div>
+      <div class="f-map">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <div>Kejaksaan Negeri Aceh Timur<br><small>Idi Rayeuk, Aceh Timur</small><br>
+          <a href="https://goo.gl/maps/EYvBKVxRQQxMWD8E7" target="_blank" style="color:#f5c518;font-size:11px">Lihat di Google Maps →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footbot">
+    <div class="w">
+      <div>Kejaksaan Negeri Aceh Timur</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://twitter.com/Kejariacehtimur" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
+        <a href="https://www.youtube.com/c/KejaksaanNegeriAcehTimur" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+        <a href="https://www.instagram.com/kejariacehtimur/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+// Slider
+let cur=0;
+const slides=document.querySelectorAll('.slide');
+const dots=document.querySelectorAll('.sl-dot');
+function go(n){
+  slides[cur].classList.remove('active');
+  dots[cur].classList.remove('active');
+  cur=(n+slides.length)%slides.length;
+  slides[cur].classList.add('active');
+  dots[cur].classList.add('active');
+}
+function chg(d){go(cur+d);}
+setInterval(()=>chg(1),5000);
+
+// Back to top
+const btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>btt.classList.toggle('show',scrollY>350));
+</script>
+</body>
+</html>
